@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simba Solution - Services de Lavage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .service {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .service img {
+            width: 100%; /* Adapté à la taille du conteneur */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Simba Solution - Services de Lavage</h1>
+        <p>Profitez de nos services de lavage de haute qualité</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#services">Nos Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Section des services -->
+    <section id="services">
+        <div class="service">
+            <h2>Lavage de Voiture</h2>
+            <img src="https://www.exemple.com/image-lavage-voiture.jpg" alt="Lavage de voiture">
+            <p>Prix : 30€</p>
+        </div>
+        <div class="service">
+            <h2>Lavage de Vêtement</h2>
+            <img src="https://www.exemple.com/image-lavage-vetement.jpg" alt="Lavage de vêtement">
+            <p>Prix : 15€</p>
+        </div>
+        <div class="service">
+            <h2>Lavage de Tapis</h2>
+            <img src="https://www.exemple.com/image-lavage-tapis.jpg" alt="Lavage de tapis">
+            <p>Prix : 25€</p>
+        </div>
+    </section>
+
+    <!-- Section de contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <p>Pour plus d'informations, remplissez le formulaire ci-dessous :</p>
+        <form id="contactForm">
+            <label for="name">Nom :</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Simba Solution. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Fonction pour gérer l'envoi du formulaire
+        document.getElementById('contactForm').onsubmit = function(event) {
+            event.preventDefault(); // Empêche le rechargement de la page
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            alert(`Merci ${name} !\nNous avons bien reçu votre message : "${message}"\nNous vous contacterons à ${email}.`);
+            
+            // Réinitialiser le formulaire après envoi
+            this.reset();
+        };
+    </script>
+
+</body>
+</html>
